@@ -1,3 +1,4 @@
+
 #Intro & starting info
 print('Welcome to the (unofficial) Ontario Covid-19 Screening-Analysis Machine.')
 lastDate = input('What is the date at the time of taking this diagnostic?   \n(DD/MM/YYYY)  \n')
@@ -62,12 +63,12 @@ elif q6 == 'n' :
 
 #Results of answers
 if q1 or q2 or q3 or q4 or q5 or q6 :
-  riskRes = 'YOU ARE AT RISK OF HAVING CONTRACTED COVID-19.    \nContact your school or workplace about your result.'
+  riskRes = ', YOU ARE AT RISK OF HAVING CONTRACTED COVID-19.    \nContact your school or workplace about your result.'
   
 else :
-  riskRes = 'You are NOT at risk.'
+  riskRes = ', You are NOT at risk.'
 
-print(riskRes)
+print('As of ' + lastDate + riskRes)
 
 #Whether the user should isolate
 if q1 or q2ii:
