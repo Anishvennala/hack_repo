@@ -1,4 +1,3 @@
-
 #Intro & starting info
 print('Welcome to the (unofficial) Ontario Covid-19 Screening-Analysis Machine.')
 lastDate = input('What is the date at the time of taking this diagnostic?   \n(DD/MM/YYYY)  \n')
@@ -11,10 +10,11 @@ if q1 == 'y' :
   q1 = True
 elif q1 == 'n' :
   q1 = False
-  
+
 q2 = int(input('How many of the following symptoms do you currently have (unrelated to prior causes or conditions):    \n-Sore throat, pain when swallowing    \n-Runny or congested nose    \n-Unusual or long lasting headache    \n-Nausea and/or vomiting and/or diarrhea    \n-Fatigue, lack of energy    \nAnswer with numbers 0-6    \n'))
 #q2 has more than just two possibilities (T/F), so it has been split into two variables
 while q2 > 6 or q2 < 0 :
+  #q2 is whether or not you have any symptoms at all, q2i is only one, q2ii it 2+
   q2 = int(input('Sorry, you mistyped. Answer with numbers 0-6    \n'))
 if q2 == 0 :
   q2i = False
@@ -85,5 +85,7 @@ print(isoRes)
 #Whether to call a doctor or health care provider
 if q1 or q2ii or q3 or q4 or q5 or q6 :
   docRes = 'Speak to your doctor or healthcare provider about your result.'
+
+print(docRes)
 
 print('Thank you for using the (unofficial) Ontario Covid-19 Screening-Analysis Machine.    \nRemember that it is important to do self-checkups regularly.')
